@@ -4,16 +4,16 @@ Readers-writers problem in which several processes (readers and writers) are try
 
 The solution must guarantee that:
 
-• If a writer has begun writing process, then
+    • If a writer has begun writing process, then
 
-  o No additional writer can perform write function 
-
-  o No reader is allowed to read
+      o No additional writer can perform write function 
+ 
+      o No reader is allowed to read
   
   
 
-• If one or more readers are reading, then 
+    • If one or more readers are reading, then 
 
-  o Other readers may read as well 
+     o Other readers may read as well 
 
-  o No writer may perform write function until all readers have finished reading
+     o No writer may perform write function until all readers have finished reading
