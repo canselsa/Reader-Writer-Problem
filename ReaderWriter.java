@@ -44,7 +44,7 @@ class ReadWriteLock{
               
 	         if (total_reader == 1){ 
 	            try{
-	  	           S.acquire();
+	  	       S.acquire();
 	              }
 	            catch (InterruptedException e) {}
 	         }
@@ -54,15 +54,13 @@ class ReadWriteLock{
 	         RC.release();
 	         
 	         try {
-				  Thread.sleep(2000);
-				} catch (InterruptedException e) {
-					e.printStackTrace();
-				}
-	       
+			Thread.sleep(2000);} 
+		catch (InterruptedException e) {
+		   e.printStackTrace(); }
 	}
 	public void readUnLock() {
 		 try{
-	  			 RC.acquire(); 
+	            RC.acquire(); 
 	         }
 	             catch (InterruptedException e) {}
 	      
@@ -76,22 +74,21 @@ class ReadWriteLock{
 	         RC.release(); 
 	         
 	         try {
-				  Thread.sleep(2000);
-				} catch (InterruptedException e) {
-					e.printStackTrace();
-				}
+			Thread.sleep(2000); } 
+		catch (InterruptedException e) {
+			e.printStackTrace(); }
 	}
 
 	public void writeLock() {
 		try {
-			Thread.sleep(2000);
-		} catch (InterruptedException e) {
+			Thread.sleep(2000); } 
+		catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		System.out.println("Reader wants to read");
 		 try{
-			 S.acquire(); }
+			S.acquire(); }
 	             catch (InterruptedException e) {}
 
 	         System.out.println("<Writer is writing.>");
@@ -102,8 +99,8 @@ class ReadWriteLock{
         S.release();
         
         try {
-			Thread.sleep(2000);
-		} catch (InterruptedException e) {
+	  Thread.sleep(2000); } 
+		catch (InterruptedException e) {
 			e.printStackTrace();
 		}
 	}
