@@ -4,7 +4,7 @@ Readers-writers problem in which several processes (readers and writers) are try
 
 The solution must guarantee that:
 
-    • If a writer has begun writing process, then
+ - If a writer has begun writing process, then
 
       o No additional writer can perform write function 
  
@@ -12,7 +12,7 @@ The solution must guarantee that:
   
   
 
-    • If one or more readers are reading, then 
+- If one or more readers are reading, then 
 
      o Other readers may read as well 
 
